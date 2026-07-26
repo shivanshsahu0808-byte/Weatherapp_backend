@@ -41,6 +41,7 @@ public class WeatherService {
                         url,
                         GeocodingResponse.class
                 );
+        System.out.println("GEOCODING RESPONSE = " + response);
 
         // 3. Check city
         if (response == null ||
