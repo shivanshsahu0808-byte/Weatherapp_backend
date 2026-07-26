@@ -31,9 +31,11 @@ public class WeatherService {
 
         // 2. Geocoding API call
 
-        String url = geocodingApiUrl
-                + "?name=" + encodedCity
-                + "&count=1";
+       String url = geocodingApiUrl
+        + "?name=" + city.replace(" ", "+")
+        + "&count=1"
+        + "&language=en"
+        + "&format=json";
 
         GeocodingResponse response =
                 template.getForObject(
